@@ -1,0 +1,17 @@
+Tests:
+ upstream-tests
+Depends:
+ mkdocs,
+ mkdocs-autorefs,
+ mkdocs-material,
+ mkdocs-material-extensions,
+ mkdocs-literate-nav,
+ mkdocstrings-python-handlers,
+ python3-all,
+ python3-markdown-callouts,
+ python3-markdown-exec,
+ python3-pygments (>> 2.12),
+ python3-pytest,
+ python3-sphinx,
+ @,
+Restrictions: allow-stderr

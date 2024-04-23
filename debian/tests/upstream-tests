@@ -1,0 +1,32 @@
+#!/bin/sh
+
+set -e -u
+
+# The test in that file requires the mkdocs AddOn git-committers that isn't
+# packaged yet.
+rm -f tests/test_plugin.py
+
+# The test 'test_extended_templates'' needs the package mkdocstrings-python-legacy
+# which can't be co-installed together with mkdocstrings-python-handlers.
+# Thus the test is disabled.
+
+cp -a *.md docs src tests mkdocs.yml "${AUTOPKGTEST_TMP}"
+
+for py3vers in $(py3versions -s); do
+    echo
+    echo "***************************"
+    echo "*** Testing with ${py3vers}"
+    echo "***************************"
+    echo
+    cd ${AUTOPKGTEST_TMP} && \
+        echo "Content of current working folder:\n" && \
+        ls -la && \
+        echo "Running tests...\n" && \
+        ${py3vers} -m pytest -sv tests -k \
+        'not test_sphinx_load_mkdocstrings_inventory_file and not test_extended_templates' && \
+        rm -rf .pytest_cache || exit 1
+done
+
+echo
+
+exit 0

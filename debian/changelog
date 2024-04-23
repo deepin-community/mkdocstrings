@@ -1,5 +1,155 @@
-template-repository (1.0-1) unstable; urgency=medium
+mkdocstrings (0.24.3-1) unstable; urgency=medium
 
-  * Initial release
+  * [1dcda3b] New upstream version 0.24.3
+  * [64982c8] d/control: Bump Standards-Version to 4.7.0
+    No further changes needed.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sun, 21 Apr 2024 09:41:49 +0200
+
+mkdocstrings (0.24.2-2) unstable; urgency=medium
+
+  * [abb6da2] Rebuild patch queue from patch-queue branch
+    Added patch:
+    tests-Mark-test_no_double_toc-expected-to-fail.patch
+  * [261957d] d/rules: Remove .my_cache folder on dh_clean
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sat, 06 Apr 2024 19:24:02 +0200
+
+mkdocstrings (0.24.2-1) unstable; urgency=medium
+
+  * [58b2923] New upstream version 0.24.2
+    (Closes: #1067326)
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Wed, 03 Apr 2024 18:28:56 +0200
+
+mkdocstrings (0.24.1-1) unstable; urgency=medium
+
+  * [81bac6a] New upstream version 0.24.1
+  * [1b1eb37] d/copyright: Update year data
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sat, 09 Mar 2024 20:46:07 +0100
+
+mkdocstrings (0.24.0-1) unstable; urgency=medium
+
+  * [2f6687f] d/watch: Add compression type gz
+  * [7b1c57b] New upstream version 0.24.0
+  * [8a5d919] Rebuild patch queue from patch-queue branch
+    Just refreshing the one existing patch.
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Thu, 23 Nov 2023 12:28:18 +0000
+
+mkdocstrings (0.23.0-1) unstable; urgency=medium
+
+  * [4dfff0a] New upstream version 0.23.0
+  * [e09943a] d/rules: Add target override_dh_clean
+    (Closes: #1048151)
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Mon, 04 Sep 2023 15:45:46 +0530
+
+mkdocstrings (0.22.0-3) unstable; urgency=medium
+
+  * [0ffdd3c] autopkgtest: Disable one more upstream test
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Thu, 22 Jun 2023 21:38:22 +0200
+
+mkdocstrings (0.22.0-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Wed, 14 Jun 2023 20:28:05 +0200
+
+mkdocstrings (0.22.0-1) experimental; urgency=medium
+
+  * [12a423d] New upstream version 0.22.0
+  * [31c1621] Rebuild patch queue from patch-queue branch
+  * [9fb8156] d/control: Adjust build depending packages
+  * [71062cc] d/rules: Use PDM_BUILD_SCM_VERSION for version inflating
+  * [c0bb0d6] d/rules: Ignore some more upstream tests
+  * [acc818d] autopkgtest: Adjust list of packages for testing
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Fri, 02 Jun 2023 10:05:41 +0200
+
+mkdocstrings (0.21.2-1) experimental; urgency=medium
+
+  * [1097ec2] New upstream version 0.21.2
+  * [3eeda0a] Rebuild patch queue from patch-queue branch
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Wed, 26 Apr 2023 20:41:46 +0200
+
+mkdocstrings (0.20.0-1) unstable; urgency=medium
+
+  * [8aef6bd] New upstream version 0.20.0
+  * [42e6fa7] Add patch queue from patch-queue branch
+    Added patch:
+    docs-Disable-some-plugins-in-config.patch
+  * [328b2dd] d/control: Add new B-D which are needed for the added tests
+  * [2264334] d/rules: Copy/remove files into place for the added tests
+  * [cdc2130] autopkgtest: Adjusting the test setup
+  * [90a280d] d/control: Bump Standards-Version to 4.6.2
+    No further changes needed.
+  * [59b1fd1] d/copyright: Update year data
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sun, 26 Feb 2023 20:32:37 +0100
+
+mkdocstrings (0.19.1-1) unstable; urgency=medium
+
+  * [6445a2b] New upstream version 0.19.1
+    (Closes: #1027511)
+  * [c7b31f8] d/control: Move to dh-seuencer-*, add BuildProfleSpecs
+  * [dda5993] d/rules: Drop --with option from default target
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Thu, 05 Jan 2023 19:56:33 +0100
+
+mkdocstrings (0.19.0-4) unstable; urgency=medium
+
+  * Team upload.
+  * [a019397] Switch from poetry back to pdm-pep517 backend.
+
+ -- Boyuan Yang <byang@debian.org>  Sat, 20 Aug 2022 10:54:05 -0400
+
+mkdocstrings (0.19.0-3) unstable; urgency=medium
+
+  * [c636851] d/{t,}/control: Add versioned dep on pygments
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sat, 02 Jul 2022 12:33:27 +0200
+
+mkdocstrings (0.19.0-2) unstable; urgency=medium
+
+  * [adfd0b9] Rebuild patch queue from patch-queue branch
+    Modified patch:
+    Switch-to-poetry-as-build-system.patch
+    Removing mkdocstrings-python-legacy as dependency.
+  * [fe3ae6a] d/control: Suggest potential python handlers
+  * [ce89c71] d/control: Add more B-D packages
+  * [3127e64] d/rules: Turn on the internal testing
+  * [18f0a49] d/rules: Remove PYBUILD_AFTER_INSTALL variable
+  * [ad447dc] autopkgtest: Adding first working setup
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Wed, 01 Jun 2022 19:13:08 +0200
+
+mkdocstrings (0.19.0-1) unstable; urgency=medium
+
+  * [f04ca3c] New upstream version 0.19.0
+  * [c7d7449] Rebuild patch queue from patch-queue branch
+    Modified patch:
+    Switch-to-poetry-as-build-system.patch
+    Adopted upstream changes to pyproject.toml.
+  * [2365dbc] d/README.source: Remove extra note for packaged version
+  * [7131c2d] Remove pytkdocs from the dependencies
+    This package isn't needed anymore as upstream has removed this package
+    from the list of required installed packages.
+  * [ccefaa0] d/control: Bump Standards-Version to 4.6.1
+    No further changes needed.
+  * [c8da4bf] d/py3dist-overrides: Add mkdocstrings_python_legacy
+    We use mkdocstrings-python-legacy as packaged Debian package, so some
+    needed package translation help.
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Mon, 30 May 2022 17:48:30 +0200
+
+mkdocstrings (0.17.0-1) unstable; urgency=medium
+
+  * [0e9d040] New upstream version 0.17.0
+  * [f559d67] First and basic Debianization
+    (Closes: #1009892)
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Wed, 20 Apr 2022 19:56:07 +0200

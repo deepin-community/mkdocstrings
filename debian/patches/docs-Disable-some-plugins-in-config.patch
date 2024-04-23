@@ -1,0 +1,32 @@
+From: Carsten Schoenert <c.schoenert@t-online.de>
+Date: Sun, 26 Feb 2023 19:55:01 +0100
+Subject: docs: Disable some plugins in config
+
+The MkDocs plugins gen-files and coverage aren't packaged yet for Debian.
+
+Forwarded: Not-Needed
+---
+ mkdocs.yml | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/mkdocs.yml b/mkdocs.yml
+index 860ce66..e126108 100644
+--- a/mkdocs.yml
++++ b/mkdocs.yml
+@@ -124,12 +124,12 @@ markdown_extensions:
+ plugins:
+ - search
+ - markdown-exec
+-- gen-files:
+-    scripts:
+-    - scripts/gen_ref_nav.py
++#- gen-files:
++#    scripts:
++#    - scripts/gen_ref_nav.py
+ - literate-nav:
+     nav_file: SUMMARY.md
+-- coverage
++#- coverage
+ - mkdocstrings:
+     handlers:
+       python:
